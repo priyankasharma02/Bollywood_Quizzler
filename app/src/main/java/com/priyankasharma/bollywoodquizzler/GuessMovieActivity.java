@@ -1,11 +1,18 @@
 package com.priyankasharma.bollywoodquizzler;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import java.time.Duration;
 
 
 public class GuessMovieActivity extends AppCompatActivity {
@@ -18,6 +25,7 @@ public class GuessMovieActivity extends AppCompatActivity {
     int mIndex;
     int mOption;
     int mScore;
+    Toast mToast;
 
     //Adding images to array
     private QuestionAnswer[] mMovieQuestionBank = new QuestionAnswer[]{
@@ -69,6 +77,8 @@ public class GuessMovieActivity extends AppCompatActivity {
 
     };
 
+    final int progresbar_increment_number = (int)Math.ceil(100.0/mMovieQuestionBank.length);
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -82,18 +92,93 @@ public class GuessMovieActivity extends AppCompatActivity {
         mProgressBar = findViewById(R.id.progressBar);
         mScoreTextView= findViewById(R.id.score);
 
+        mQuestionAnswer = mMovieQuestionBank[mIndex];
+        movieImage.setImageResource(mQuestionAnswer.getQuestionId());
+        option1.setText(mQuestionAnswer.getA());
+        option2.setText(mQuestionAnswer.getB());
+        option3.setText(mQuestionAnswer.getC());
+        option4.setText(mQuestionAnswer.getD());
 
+        option1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                checkAnswer(option1.getText());
+                updateQuestion();
+            }
+        });
+
+        option2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                checkAnswer(option2.getText());
+                updateQuestion();
+            }
+        });
+
+        option3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                checkAnswer(option3.getText());
+                updateQuestion();
+            }
+        });
+
+        option4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                checkAnswer(option4.getText());
+                updateQuestion();
+            }
+        });
+
+
+
+    }
+
+    public void checkAnswer(CharSequence userSelection)
+    {
+
+       CharSequence correctAnswer = getResources().getText(mQuestionAnswer.getCorrectOption());
+       if(mToast!=null)
+           mToast.cancel();
+       if(correctAnswer==userSelection) {
+           mScore++;
+           mToast = Toast.makeText(this, "You Got It", Toast.LENGTH_SHORT);
+       }
+       else
+           mToast = Toast.makeText(this,"Oops Wrong Answer", Toast.LENGTH_SHORT);
+       mToast.show();
 
     }
 
     public void updateQuestion()
     {
         mIndex = (mIndex+1)%mMovieQuestionBank.length;
-        QuestionAnswer mquestion = mMovieQuestionBank[mIndex];
-        movieImage.setImageResource(mquestion.getQuestionId());
-        option1.setText(mquestion.getA());
-        option2.setText(mquestion.getB());
-        option3.setText(mquestion.getC());
-        option4.setText(mquestion.getD());
+        if(mIndex==0) {
+            AlertDialog.Builder alert = new AlertDialog.Builder(this);
+            alert.setTitle("Game Over");
+            alert.setCancelable(false);
+            alert.setMessage("Your Score is: " + mScore);
+            alert.setPositiveButton("Go To Menu", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    Intent intent = new Intent(GuessMovieActivity.this,MainActivity.class);
+                    startActivity(intent);
+                }
+            });
+            alert.show();
+        }
+
+        else {
+            mQuestionAnswer = mMovieQuestionBank[mIndex];
+            movieImage.setImageResource(mQuestionAnswer.getQuestionId());
+            option1.setText(mQuestionAnswer.getA());
+            option2.setText(mQuestionAnswer.getB());
+            option3.setText(mQuestionAnswer.getC());
+            option4.setText(mQuestionAnswer.getD());
+
+            mProgressBar.incrementProgressBy(progresbar_increment_number);
+            mScoreTextView.setText("Score " + mScore + "/" + mMovieQuestionBank.length);
+        }
     }
 }
