@@ -1,3 +1,101 @@
 <resources>
     <string name="app_name">Bollywood Quizzler</string>
+    <string name="guessMovie_titleText">Guess The Movie!!</string>
+    <string name="option_textSize">30sp</string>
+
+    <string name="guessMovie01_option1">Dilwale</string>
+    <string name="guessMovie01_option2">Dilwale Dulhania Le Jaenge</string>
+    <string name="guessMovie01_option3">Kuch Kuch Hota Hai</string>
+    <string name="guessMovie01_option4">Kabhi Khushi Kabhi Gham</string>
+    <string name="guessMovie01_correctOption">Dilwale Dulhania Le Jaenge</string>
+
+    <string name="guessMovie02_option1">Diljale</string>
+    <string name="guessMovie02_option2">Zameen</string>
+    <string name="guessMovie02_option3">Deewar</string>
+    <string name="guessMovie02_option4">Damini</string>
+    <string name="guessMovie02_correctOption">Damini</string>
+
+    <string name="guessMovie03_option1">Andaaz Apna Apna</string>
+    <string name="guessMovie03_option2">Dil</string>
+    <string name="guessMovie03_option3">Hum Hain Rahi Pyar Ke</string>
+    <string name="guessMovie03_option4">Akele Hum Akele Tum</string>
+    <string name="guessMovie03_correctOption">Andaaz Apna Apna</string>
+
+    <string name="guessMovie04_option1">Housefull</string>
+    <string name="guessMovie04_option2">Housefull2</string>
+    <string name="guessMovie04_option3">Housefull3</string>
+    <string name="guessMovie04_option4">Cocktail</string>
+    <string name="guessMovie04_correctOption">Housefull</string>
+
+    <string name="guessMovie05_option1">Baghban</string>
+    <string name="guessMovie05_option2">Sarkar</string>
+    <string name="guessMovie05_option3">Baabul</string>
+    <string name="guessMovie05_option4">Sarkar Raj</string>
+    <string name="guessMovie05_correctOption">Baabul</string>
+
+    <string name="guessMovie06_option1">Force</string>
+    <string name="guessMovie06_option2">Force2</string>
+    <string name="guessMovie06_option3">Rocky Handsome</string>
+    <string name="guessMovie06_option4">Parmanu</string>
+    <string name="guessMovie06_correctOption">Rocky Handsome</string>
+
+    <string name="guessMovie07_option1">Shootout At Wadala</string>
+    <string name="guessMovie07_option2">Madras Cafe</string>
+    <string name="guessMovie07_option3">Kaabul Express</string>
+    <string name="guessMovie07_option4">Satyamev Jayte</string>
+    <string name="guessMovie07_correctOption">Satyamev Jayte</string>
+
+    <string name="guessMovie08_option1">Happy New Year</string>
+    <string name="guessMovie08_option2">Om Shanti Om</string>
+    <string name="guessMovie08_option3">Raees</string>
+    <string name="guessMovie08_option4">Dilwale</string>
+    <string name="guessMovie08_correctOption">Happy New Year</string>
+
+    <string name="guessMovie09_option1">Padmavat</string>
+    <string name="guessMovie09_option2">Ramleela</string>
+    <string name="guessMovie09_option3">Devdas</string>
+    <string name="guessMovie09_option4">Bajirao Mastani</string>
+    <string name="guessMovie09_correctOption">Ramleela</string>
+
+    <string name="guessMovie10_option1">Baazigar</string>
+    <string name="guessMovie10_option2">Main Hoon Na</string>
+    <string name="guessMovie10_option3">Om Shanti Om</string>
+    <string name="guessMovie10_option4">Dil Se</string>
+    <string name="guessMovie10_correctOption">Om Shanti Om</string>
+
+    <string name="guessMovie11_option1">Chennai Express</string>
+    <string name="guessMovie11_option2">Koyla</string>
+    <string name="guessMovie11_option3">Baazigar</string>
+    <string name="guessMovie11_option4">Chamatkar</string>
+    <string name="guessMovie11_correctOption">Chennai Express</string>
+
+    <string name="guessMovie12_option1">Gangs Of Wasseypur</string>
+    <string name="guessMovie12_option2">Kick</string>
+    <string name="guessMovie12_option3">Munna Bhai M.B.B.S</string>
+    <string name="guessMovie12_option4">Gangs Of Wasseypur2</string>
+    <string name="guessMovie12_correctOption">Kick</string>
+
+    <string name="guessMovie13_option1">Gangs Of Wasseypur</string>
+    <string name="guessMovie13_option2">Veer Zaara</string>
+    <string name="guessMovie13_option3">Bajrangi Bhaijaan</string>
+    <string name="guessMovie13_option4">A Gentleman</string>
+    <string name="guessMovie13_correctOption">Bajrangi Bhaijaan</string>
+
+    <string name="guessMovie14_option1">London Paris NewYork</string>
+    <string name="guessMovie14_option2">Welcome To New York</string>
+    <string name="guessMovie14_option3">Total Siyappa</string>
+    <string name="guessMovie14_option4">Tere Bin Laden</string>
+    <string name="guessMovie14_correctOption">London Paris NewYork</string>
+
+    <string name="guessMovie15_option1">Chup Chup Ke</string>
+    <string name="guessMovie15_option2">Phir Hera Pheri</string>
+    <string name="guessMovie15_option3">Dhol</string>
+    <string name="guessMovie15_option4">Bhaagam Bhag</string>
+    <string name="guessMovie15_correctOption">Phir Hera Pheri</string>
+
+
+
+
+
+
 </resources>
